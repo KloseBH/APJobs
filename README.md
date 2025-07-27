@@ -5,11 +5,11 @@ Daniel Dias - Back-End Develope
 
 ## Contexto
 
-**APJobs** é uma API simples e eficiente para consulta de vagas de emprego disponíveis no LinkedIn, utilizando web scraping com `axios` e `cheerio`. Atualmente, a API permite buscas personalizadas por meio de parâmetros como título da vaga, localização, tempo de publicação e paginação.
+**APJobs** é uma API simples e eficiente para consulta de vagas de emprego disponíveis no LinkedIn e na Gupy, utilizando web scraping com `axios` e `cheerio`. Atualmente, a API permite buscas personalizadas por meio de parâmetros como título da vaga, localização, tempo de publicação e paginação.
 
 ## Funcionalidades
 
-- Consulta de vagas de emprego no LinkedIn
+- Consulta de vagas de emprego no LinkedIn e na Gupy
 - Filtro por:
   - Título da vaga (`title`)
   - Localização (`location`)
@@ -100,8 +100,6 @@ GET /jobs?title=Desenvolvedor Java&location=Brasil&time=2d&page=1
   }
 ]
 ```
-
-> ⚠️ Os dados retornados são obtidos diretamente do LinkedIn via scraping e podem variar de acordo com atualizações no layout do site.
 
 ## Tecnologias utilizadas
 
