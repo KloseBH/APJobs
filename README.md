@@ -112,4 +112,5 @@ GET /jobs?title=Desenvolvedor Java&location=Brasil&time=2d&page=1
 
 - A API ainda está em desenvolvimento, embora já cumpra o objetivo.
 - Apenas vagas do LinkedIn e da Gupy são consultadas no momento.
-- Será immplementado no futuro cache/local storage para evitar bloqueios por parte do LinkedIn, uitlizando sqlite3 por exemplo. 
+- Será immplementado no futuro cache/local storage para evitar bloqueios por parte do LinkedIn, uitlizando sqlite3 por exemplo.
+- Também será implementado um front-end utilizando React.
