@@ -107,6 +107,8 @@ GET /jobs?title=Desenvolvedor Java&location=Brasil&time=2d&page=1
 - [Axios](https://axios-http.com/)
 - [Cheerio](https://cheerio.js.org/)
 - [Node.js](https://nodejs.org/)
+- [Vite.js](https://vite.dev/)
+- [React](https://react.dev/)
 
 ## Observações
 
