@@ -1,7 +1,7 @@
 # APJobs
 ## Autor
 
-Daniel Dias - Back-End Develope
+Daniel Dias - Full Stack Developer
 
 ## Contexto
 
@@ -112,8 +112,7 @@ GET /jobs?title=Desenvolvedor Java&location=Brasil&time=2d&page=1
 
 ## Observações
 
-- A API ainda está em desenvolvimento.
-- Apenas vagas do LinkedIn são consultadas no momento.
-- O uso excessivo pode violar os Termos de Serviço do LinkedIn. Utilize com responsabilidade.
-- Recomendado implementar cache/local storage ou limitar chamadas para evitar bloqueios por parte do LinkedIn. 
-    - No futuro devo implementar algo com slqlite3
+- A API ainda está em desenvolvimento, embora já cumpra o objetivo.
+- Apenas vagas do LinkedIn e da Gupy são consultadas no momento.
+- Será immplementado no futuro cache/local storage para evitar bloqueios por parte do LinkedIn, uitlizando sqlite3 por exemplo.
+- Também será implementado um front-end utilizando React.
