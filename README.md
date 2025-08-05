@@ -3,7 +3,9 @@
 
 Daniel Dias - Full Stack Developer
 
-> ⚠️ Aviso legal: Este projeto é destinado exclusivamente a fins educacionais. O uso de scraping em sites de terceiros pode violar os termos de uso dessas plataformas. O autor não se responsabiliza pelo uso indevido deste código.
+> ⚠️ Aviso legal: Este projeto utiliza apenas APIs públicas e informações acessíveis de forma permitida pelas próprias plataformas, respeitando limites de requisições, boas práticas de uso e os arquivos robots.txt quando aplicável. O objetivo é exclusivamente educacional e demonstrativo, sem fins comerciais. Recomendamos que qualquer reutilização deste código siga as políticas de uso de cada serviço acessado.
+
+> ⚠️ Legal Notice: This project uses only public APIs and data that is explicitly allowed by each platform, respecting request limits, usage policies, and robots.txt guidelines when applicable. It is strictly for educational and demonstrative purposes, with no commercial intent. We recommend that any reuse of this code complies with the usage terms of each accessed service.
 
 ## Contexto
 
@@ -112,4 +114,4 @@ GET /jobs?title=Desenvolvedor Java&location=Brasil&time=2d&page=1
 - [Vite.js](https://vite.dev/)
 - [React](https://react.dev/)
 
-*O script respeita limites de acesso e é projetado para ser leve, evitando sobrecarga nos servidores alvo.*
+*O script realiza coletas de forma leve, com frequência controlada e dentro dos limites aceitáveis, evitando sobrecarga e respeitando as diretrizes técnicas das plataformas utilizadas.*
