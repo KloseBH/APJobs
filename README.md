@@ -3,13 +3,15 @@
 
 Daniel Dias - Full Stack Developer
 
+> ⚠️ Aviso legal: Este projeto é destinado exclusivamente a fins educacionais. O uso de scraping em sites de terceiros pode violar os termos de uso dessas plataformas. O autor não se responsabiliza pelo uso indevido deste código.
+
 ## Contexto
 
-**APJobs** é uma API simples e eficiente para consulta de vagas de emprego disponíveis no LinkedIn e na Gupy, utilizando web scraping com `axios` e `cheerio`. Atualmente, a API permite buscas personalizadas por meio de parâmetros como título da vaga, localização, tempo de publicação e paginação.
+**APJobs** é uma API simples e eficiente para consulta de vagas de emprego disponíveis pela internet, utilizando web scraping com `axios` e `cheerio` e também APIs públicas. Atualmente, a API permite buscas personalizadas por meio de parâmetros como título da vaga, localização, tempo de publicação e paginação.
 
 ## Funcionalidades
 
-- Consulta de vagas de emprego no LinkedIn e na Gupy
+- Consulta de vagas de emprego
 - Filtro por:
   - Título da vaga (`title`)
   - Localização (`location`)
@@ -96,7 +98,7 @@ GET /jobs?title=Desenvolvedor Java&location=Brasil&time=2d&page=1
     "company": "Empresa X",
     "location": "São Paulo, Brasil",
     "posted": "2 dias atrás",
-    "link": "https://www.linkedin.com/jobs/view/123456789/"
+    "link": "https://www.exemplosite.com/jobs/123456789/"
   }
 ]
 ```
@@ -110,9 +112,4 @@ GET /jobs?title=Desenvolvedor Java&location=Brasil&time=2d&page=1
 - [Vite.js](https://vite.dev/)
 - [React](https://react.dev/)
 
-## Observações
-
-- A API ainda está em desenvolvimento, embora já cumpra o objetivo.
-- Apenas vagas do LinkedIn e da Gupy são consultadas no momento.
-- Será immplementado no futuro cache/local storage para evitar bloqueios por parte do LinkedIn, uitlizando sqlite3 por exemplo.
-- Também será implementado um front-end utilizando React.
+*O script respeita limites de acesso e é projetado para ser leve, evitando sobrecarga nos servidores alvo.*
