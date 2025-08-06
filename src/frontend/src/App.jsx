@@ -1,33 +1,54 @@
-import { useState } from 'react'
-import reactLogo from './assets/react.svg'
-import viteLogo from '/vite.svg'
-import './styles/App.css'
+import { useState } from 'react';
+import './styles/App.css';
+import Form from './components/form';
+import Results from './components/results';
+import Loading from './components/loading';
+import Error from './components/error';
+import fetchJobs from './services/apjobs';
 
 function App() {
-  const [count, setCount] = useState(0)
+  const [view, setView] = useState('form');
+  const [apiData, setApiData] = useState(null);
+  const [errorMessage, setErrorMessage] = useState('');
+
+  const handleSearch = async (formData) => {
+    setView('loading');
+    
+    try {
+      const results = await fetchJobs({
+        title: formData.title,
+        location: formData.location,
+        time: formData.time,
+        page: formData.page
+      });
+      
+      setApiData(results);
+      setView('results');
+    } catch (error) {
+      setErrorMessage(error.message);
+      setView('error');
+    }
+  };
+
+  const handleReset = () => setView('form');
+
+  const renderContent = () => {
+    switch(view) {
+      case 'loading': return <Loading />;
+      case 'results': return <Results data={apiData} onReset={handleReset} />;
+      case 'error': return <Error message={errorMessage} onReset={handleReset} />;
+      default:
+        return <Form Consulta={handleSearch} />;
+    }
+  };
 
   return (
     <>
       <div>
-        <a href="https://vite.dev" target="_blank">
-          <img src={viteLogo} className="logo" alt="Vite logo" />
-        </a>
-        <a href="https://react.dev" target="_blank">
-          <img src={reactLogo} className="logo react" alt="React logo" />
-        </a>
+        <h1>APJobs</h1>
+        <h2>API de busca de vagas de emprego</h2>
+        {renderContent()}
       </div>
-      <h1>Vite + React</h1>
-      <div className="card">
-        <button onClick={() => setCount((count) => count + 1)}>
-          count is {count}
-        </button>
-        <p>
-          Edit <code>src/App.jsx</code> and save to test HMR
-        </p>
-      </div>
-      <p className="read-the-docs">
-        Click on the Vite and React logos to learn more
-      </p>
     </>
   )
 }

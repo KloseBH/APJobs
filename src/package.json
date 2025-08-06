@@ -3,11 +3,16 @@
   "version": "1.0.0",
   "main": "index.js",
   "scripts": {
-    "dev": "concurrently \"nodemon run dev --prefix src/backend\" \"nodemon run dev --prefix src/frontend\"",
-    "start": "concurrently \"npm run start --prefix src/backend\" \"npm run start --prefix src/frontend\""
+    "dev": "concurrently \"npm run dev --prefix backend\" \"npm run dev --prefix frontend\"",
+    "start": "concurrently \"npm run start --prefix backend\" \"npm run start --prefix frontend\""
   },
   "keywords": [],
   "author": "Daniel Henrique Alves Bicalho Dias",
   "license": "ISC",
-  "description": "Aplicação para coleta e visualização de vagas de emprego"
+  "description": "Aplicação para coleta e visualização de vagas de emprego",
+  "dependencies": {
+    "concurrently": "^9.2.0",
+    "nodemon": "^3.1.10",
+    "vite": "^6.3.5"
+  }
 }
