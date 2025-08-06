@@ -11,12 +11,9 @@ async function searchJobs(req, res) {
 
         const jobsRemotive = await apiRemotive(req.query);
         const jobsGupy = await crawlerGP(req.query);
-        jobs = {
+        res.status(200).json({
             Remotive: jobsRemotive?jobsRemotive:[],
             Gupy: jobsGupy?jobsGupy:[]
-        }
-        res.status(200).json({
-            APJobs: jobs
         });
     } catch (error) {
         console.error('Erro ao buscar vagas:', error);
