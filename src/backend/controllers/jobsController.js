@@ -43,8 +43,9 @@ async function crawlerGP(params){
     console.log('Crawler Gupy...');
 
     let json_response = {};
-    json_response['aviso'] = "As vagas coletadas a partir da plataforma Gupy são obtidas por meio de consultas públicas permitidas pelo arquivo robots.txt. A coleta é realizada com responsabilidade, respeitando limites técnicos e sem sobrecarregar os servidores. Utilizamos apenas endpoints acessíveis pelo próprio site da Gupy, com frequência controlada. Todas as vagas mantêm seu link original e podem ser acessadas diretamente pela plataforma oficial."
-    json_response['url_portal'] = 'https://gupy.io/';
+    json_response['warning'] = "As vagas coletadas a partir da plataforma Gupy são obtidas por meio de consultas públicas permitidas pelo arquivo robots.txt. A coleta é realizada com responsabilidade, respeitando limites técnicos e sem sobrecarregar os servidores. Utilizamos apenas endpoints acessíveis pelo próprio site da Gupy, com frequência controlada. Todas as vagas mantêm seu link original e podem ser acessadas diretamente pela plataforma oficial."
+    json_response['link'] = 'https://gupy.io/';
+    json_response['name'] = 'Gupy';
 
     const location = params.location ? `&country=${params.location}` : ''; 
     const title = params.title.replace(/\s/g, '+');
@@ -127,8 +128,9 @@ async function apiRemotive(params) {
     console.log('Acessado API da Remotive...');
 
     let json_response = {};
-    json_response['aviso'] = "As vagas obtidas da plataforma Remotive são acessadas por meio de sua API pública, conforme permitido em sua documentação oficial. A coleta é realizada com moderação, respeitando os limites de requisições recomendados (até 4 vezes ao dia) e com atribuição adequada. Todas as vagas incluem o link original e mencionam a Remotive como fonte, garantindo transparência e conformidade com os termos de uso da plataforma.";
-    json_response['url_portal'] = 'https://remotive.com/';
+    json_response['warning'] = "As vagas obtidas da plataforma Remotive são acessadas por meio de sua API pública, conforme permitido em sua documentação oficial. A coleta é realizada com moderação, respeitando os limites de requisições recomendados (até 4 vezes ao dia) e com atribuição adequada. Todas as vagas incluem o link original e mencionam a Remotive como fonte, garantindo transparência e conformidade com os termos de uso da plataforma.";
+    json_response['link'] = 'https://remotive.com/';
+    json_response['name'] = 'Remotive';
 
     const title = params.title.replace(/\s/g, '+');
     const time = params.time ? parseTempo(params.time) : parseTempo('31d');
@@ -191,7 +193,7 @@ async function apiRemotive(params) {
                 portal: 'Remotive',
                 title: job.title || 'Sem título',
                 type: 'Remoto',
-                description: job.description || '',
+                description: job.description ? job.description.replace(/<[^>]*>/g, '') :'',
                 company: {
                     name: job.company_name || 'Desconhecida'
                 },

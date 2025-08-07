@@ -33,11 +33,20 @@ Daniel Dias - Full Stack Developer
 
 ```bash
 git clone https://github.com/seu-usuario/apjobs.git
-cd apjobs
+
+cd apjobs/src
+npm install
+
+cd apjobs/src/frontend
+npm install
+
+cd apjobs/src/backend
 npm install
 ```
 
 ### Executando a API
+
+Na pasta src execute:
 
 ```bash
 npm start
@@ -96,11 +105,25 @@ GET /jobs?title=Desenvolvedor Java&location=Brasil&time=2d&page=1
 ```json
 [
   {
-    "title": "Desenvolvedor Java Pleno",
-    "company": "Empresa X",
-    "location": "São Paulo, Brasil",
-    "posted": "2 dias atrás",
-    "link": "https://www.exemplosite.com/jobs/123456789/"
+    "Portal Z":{
+      "warning": "Somente utilizar para fins educationais respeitando limite da origem",
+      "link": "https://portalZ.com/",
+      "jobs":{
+        {
+          "portal": "Portal Z",
+          "title": "Desenvolvedor Java Pleno",
+          "type": "Remoto",
+          "description": "Desenvolver aplicações em java...",
+          "company": {
+            "name": "Empresa Y",
+            "link": "https://empresaY.com/"
+          },
+          "location": "São Paulo, Brasil",
+          "date": "2 dias atrás",
+          "link": "https://www.exemplosite.com/jobs/123456789/"
+        }
+      }
+    }
   }
 ]
 ```

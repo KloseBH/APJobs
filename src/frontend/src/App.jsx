@@ -21,7 +21,6 @@ function App() {
         time: formData.time,
         page: formData.page
       });
-      
       setApiData(results);
       setView('results');
     } catch (error) {

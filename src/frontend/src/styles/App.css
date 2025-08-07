@@ -11,14 +11,97 @@ form{
   padding: 1rem;
   box-shadow: 5px 5px 5px 0px lightblue;
   border-radius: 0.5rem;
+  background-color: rgb(14, 14, 14);
 }
 form>button{
   margin-top: 1rem;
 }
 
+.results{
+  padding: 1rem;
+  box-shadow: 5px 5px 5px 0px lightblue;
+  border-radius: 0.5rem;
+  background-color: rgb(14, 14, 14);
+}
+
+#Remotive>.row:nth-of-type(2),
+#Gupy>.row:nth-of-type(2){
+  max-height: 30rem; 
+  overflow-y: auto;
+  padding: 0.5rem;
+}
+
+#Gupy{
+  border: #0055FF solid 0.3rem;
+}
+#Remotive{
+  border: #FF6B00 solid 0.3rem;
+}
+
+#Gupy>.row:nth-of-type(1){
+  background-color: #0055FF ;
+}
+#Remotive>.row:nth-of-type(1){
+  background-color: #FF6B00;
+}
+
+#card{
+  background-color: #1E1E2F; 
+  color: #F1F5F9;          
+  border-radius: 12px;
+  padding: 1rem;
+}
+
+.btn-outline {
+  color: #f1f5f9; 
+  border: 2px solid #f1f5f9;
+  background-color: transparent;
+  transition: all 0.3s ease;
+}
+
+.btn-outline:hover,
+.btn-outline:focus {
+  background-color: #f1f5f9;
+  color: #1e1e2f;
+  border-color: #f1f5f9;
+  text-decoration: none;
+}
+
 @media (prefers-color-scheme: light) {
+  .results,
   form{
     background-color: #E0E0E0;
     box-shadow: 5px 5px 5px 0px lightblue;
+  }
+  #card{
+    background-color: #ffffff;
+    color: #212529;            
+    border-radius: 12px;
+    box-shadow: 0 4px 12px rgba(0, 0, 0, 0.1);
+    padding: 1rem;
+  }
+  .btn-outline {
+    color: #212529; 
+    border: 2px solid #212529;
+    background-color: transparent;
+    transition: all 0.3s ease;
+  }
+
+  .btn-outline:hover,
+  .btn-outline:focus {
+    background-color: #212529;
+    color: #fff;
+    border-color: #212529;
+    text-decoration: none;
+  }
+
+  #Gupy>.row:nth-of-type(1),
+  #Remotive>.row:nth-of-type(1){
+    color: white;
+  }
+
+  #Gupy>.row:nth-of-type(2),
+  #Remotive>.row:nth-of-type(2){
+    background-color: white;
   }
 }

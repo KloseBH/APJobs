@@ -10,22 +10,10 @@ body {
   display: flex;
   place-items: center;
   min-width: 320px;
-  min-height: 100vh;
-}
-
-:root {
-  color-scheme: light dark;
+  background-color:  #212529;
   color: #E0E0E0;
-  background-color:  #121212;
-}
-
-a {
-  font-weight: 500;
-  color: #646cff;
-  text-decoration: inherit;
-}
-a:hover {
-  color: #535bf2;
+  color-scheme: light dark;
+  min-height: 100vh;
 }
 
 h1 {
@@ -74,13 +62,30 @@ label {
   margin-bottom: 0.25rem;
 }
 
+a {
+  color: #66aaff;
+  text-decoration: none;
+  transition: color 0.3s ease;
+}
+
+a:hover {
+  color: #aaddff;
+  text-decoration: underline;
+}
+
 @media (prefers-color-scheme: light) {
-  :root {
+  body {
     color: black;
     background: linear-gradient(160deg, white, lightblue);
   }
+  a {
+    color: #0d6efd;
+    text-decoration: none;
+    transition: color 0.3s ease;
+  }
   a:hover {
-    color: #747bff;
+    color: #0a58ca;
+    text-decoration: underline;
   }
   input,
   button {
